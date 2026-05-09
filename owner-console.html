@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Owner Console — Hale Kanikapila Preview</title>
+  <title>Owner Dashboard — Hale Kanikapila Preview</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
@@ -19,80 +19,233 @@
     </div>
   </header>
 
-  <section class="hk-section">
-    <div class="hk-container">
-      <div style="background:var(--hk-cream-dark);padding:var(--hk-s4);border-radius:6px;margin-bottom:var(--hk-s5);">
-        <strong>What you're looking at:</strong> a mockup of the dashboard owners see when they log in. No WordPress firehose — just the three things they actually need to do, with structured forms that make it impossible to miss the important fields (like the vibe descriptor on event listings).
+  <div style="background:#fff7e0;border-bottom:1px solid #e6d8b0;padding:10px var(--hk-s4);text-align:center;font-family:var(--hk-font-ui);font-size:.85rem;color:#7a5c1a;">
+    <strong>Mockup preview</strong> — this is what the owner-facing dashboard would look like. Click around to feel the workflow.
+  </div>
+
+  <div class="hk-dash">
+    <aside class="hk-dash__side">
+      <h4>Manage</h4>
+      <ul class="hk-dash__nav">
+        <li><a href="owner-console.html" class="is-active"><span class="hk-dash__icon">▦</span> Dashboard</a></li>
+        <li><a href="owner-events.html"><span class="hk-dash__icon">📅</span> Events</a></li>
+        <li><a href="#" onclick="alert('Mockup — Menu editor would open here.');return false;"><span class="hk-dash__icon">🍽️</span> Menu</a></li>
+        <li><a href="#" onclick="alert('Mockup — Hours editor would open here.');return false;"><span class="hk-dash__icon">🕐</span> Hours</a></li>
+        <li><a href="#" onclick="alert('Mockup — Photo gallery would open here.');return false;"><span class="hk-dash__icon">🖼️</span> Photos</a></li>
+      </ul>
+      <h4>Settings</h4>
+      <ul class="hk-dash__nav">
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">⚙</span> Site Settings</a></li>
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">👥</span> Staff Accounts</a></li>
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">🛟</span> Help &amp; Training</a></li>
+      </ul>
+    </aside>
+
+    <main class="hk-dash__main">
+
+      <div class="hk-dash__topbar">
+        <div>
+          <h1 class="hk-dash__welcome">Aloha, Hale Kanikapila <small>Saturday, May 9 · Last sign-in 2 days ago</small></h1>
+        </div>
+        <div class="hk-dash__user">
+          <a href="index.html" target="_blank" style="color:var(--hk-accent);text-decoration:none;font-weight:600;">View Live Site →</a>
+          <span class="hk-dash__avatar">HK</span>
+          <span>Manager</span>
+        </div>
       </div>
 
-      <h1 style="text-align:center;">Owner Dashboard</h1>
-      <p style="text-align:center;color:var(--hk-text-muted);">Welcome back, Hale Kanikapila. What would you like to do?</p>
-
-      <div class="hk-console-grid">
-        <div class="hk-console-tile" id="add-event-tile">
-          <div class="hk-console-tile__icon">📅</div>
-          <div class="hk-console-tile__title">Add Event</div>
-          <div class="hk-console-tile__desc">Post a new show, with vibe descriptor and photo</div>
+      <div class="hk-dash__tonight">
+        <div>
+          <div class="label">Tonight on stage</div>
+          <h2>Larry Dupio's Allstar Band</h2>
+          <p class="vibe">Hilo's deep-bench groove veterans, locked in tight.</p>
+          <div class="meta">8:00 pm – 11:00 pm · No cover · 87 RSVPs · Posted 6 days ago</div>
         </div>
-        <div class="hk-console-tile">
-          <div class="hk-console-tile__icon">🍽️</div>
-          <div class="hk-console-tile__title">Edit Menu</div>
-          <div class="hk-console-tile__desc">Update food and drink items, prices, sections</div>
-        </div>
-        <div class="hk-console-tile">
-          <div class="hk-console-tile__icon">🕐</div>
-          <div class="hk-console-tile__title">Update Hours</div>
-          <div class="hk-console-tile__desc">Change opening hours or post a holiday closure</div>
+        <div class="actions">
+          <button class="hk-btn" onclick="openModal('add-event-modal')" style="background:rgba(255,255,255,0.15);">Edit Tonight</button>
+          <a href="events.html" target="_blank" style="color:var(--hk-cream-dark);font-family:var(--hk-font-ui);font-size:.85rem;text-align:center;">Preview public page →</a>
         </div>
       </div>
-    </div>
-  </section>
 
+      <div class="hk-stats">
+        <div class="hk-stat">
+          <div class="num">6</div>
+          <div class="lbl">Upcoming Events</div>
+          <span class="delta">+2 this week</span>
+        </div>
+        <div class="hk-stat">
+          <div class="num">42</div>
+          <div class="lbl">Menu Items</div>
+          <span class="delta">3 updated this week</span>
+        </div>
+        <div class="hk-stat">
+          <div class="num">Open</div>
+          <div class="lbl">Tonight's Hours</div>
+          <span class="delta">5pm – 12am</span>
+        </div>
+        <div class="hk-stat">
+          <div class="num">2</div>
+          <div class="lbl">Drafts to Publish</div>
+          <span class="delta warn">Needs your review</span>
+        </div>
+      </div>
+
+      <div class="hk-quick">
+        <button onclick="openModal('add-event-modal')"><span class="ico">＋</span> Add Event</button>
+        <button onclick="alert('Mockup — Add menu item form would open.')"><span class="ico">🍽️</span> Add Menu Item</button>
+        <button onclick="alert('Mockup — Hours editor would open.')"><span class="ico">🕐</span> Update Hours</button>
+        <button onclick="alert('Mockup — Closure announcement would open.')"><span class="ico">📣</span> Post Closure</button>
+      </div>
+
+      <div class="hk-panels">
+
+        <section class="hk-panel">
+          <header class="hk-panel__head">
+            <h3>Upcoming Events</h3>
+            <a href="owner-events.html">Manage all →</a>
+          </header>
+          <div class="hk-panel__body">
+            <div class="hk-mini-event">
+              <img src="assets/img/events/larry-dupios.jpg" alt="">
+              <div>
+                <p class="name">Larry Dupio's Allstar Band</p>
+                <div class="when">Tonight · 8:00pm – 11:00pm · Free</div>
+              </div>
+              <div class="acts">
+                <button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button>
+              </div>
+            </div>
+            <div class="hk-mini-event">
+              <img src="assets/img/events/dj-self-target.jpg" alt="">
+              <div>
+                <p class="name">DJ Self Target</p>
+                <div class="when">Mon May 11 · 9pm – 12am · $5</div>
+              </div>
+              <div class="acts">
+                <button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button>
+              </div>
+            </div>
+            <div class="hk-mini-event">
+              <img src="assets/img/events/open-mic-tuesdays.jpg" alt="">
+              <div>
+                <p class="name">Open Mic Tuesdays</p>
+                <div class="when">Tue May 12 · 7pm – 10pm · Free</div>
+              </div>
+              <div class="acts">
+                <button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button>
+              </div>
+            </div>
+            <div class="hk-mini-event">
+              <img src="assets/img/events/karaoke-wednesdays.jpg" alt="">
+              <div>
+                <p class="name">Karaoke Wednesdays</p>
+                <div class="when">Wed May 13 · 8pm – 11pm · Free</div>
+              </div>
+              <div class="acts">
+                <button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hk-panel">
+          <header class="hk-panel__head">
+            <h3>Recent Activity</h3>
+          </header>
+          <div class="hk-panel__body">
+            <ul class="hk-activity">
+              <li>You added <strong>Freaky Tiki</strong> to next Saturday's lineup. <span class="time">2 days ago</span></li>
+              <li>You updated the price of <strong>Mai Tai</strong> on the drinks menu. <span class="time">3 days ago</span></li>
+              <li>Auto-publish: <strong>Karaoke Wednesdays</strong> recurring instance for May 13 went live. <span class="time">5 days ago</span></li>
+              <li>You posted a closure for <strong>Memorial Day</strong>. <span class="time">1 week ago</span></li>
+              <li>You uploaded 4 photos to the gallery. <span class="time">1 week ago</span></li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="hk-panels" style="grid-template-columns:1fr 1fr;">
+        <section class="hk-panel">
+          <header class="hk-panel__head">
+            <h3>Menu — Quick Edit</h3>
+            <a href="#" onclick="alert('Mockup — full menu editor.');return false;">Open editor →</a>
+          </header>
+          <div class="hk-panel__body" style="padding:var(--hk-s4);">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f5ebd5;">
+              <div><strong>Kalua Pork Plate</strong><div style="font-size:.8rem;color:var(--hk-text-muted);">Mains</div></div>
+              <div style="font-family:var(--hk-font-display);">$18</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f5ebd5;">
+              <div><strong>Poke Bowl</strong><div style="font-size:.8rem;color:var(--hk-text-muted);">Pupus</div></div>
+              <div style="font-family:var(--hk-font-display);">$16</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
+              <div><strong>Mai Tai</strong><div style="font-size:.8rem;color:var(--hk-text-muted);">Cocktails</div></div>
+              <div style="font-family:var(--hk-font-display);">$12</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hk-panel">
+          <header class="hk-panel__head">
+            <h3>This Week's Hours</h3>
+            <a href="#" onclick="alert('Mockup — hours editor.');return false;">Edit →</a>
+          </header>
+          <div class="hk-panel__body" style="padding:var(--hk-s4);">
+            <table style="width:100%;border-collapse:collapse;font-family:var(--hk-font-ui);font-size:.92rem;">
+              <tr><td style="padding:6px 0;color:var(--hk-text-muted);">Mon – Thu</td><td style="text-align:right;">5:00pm – 11:00pm</td></tr>
+              <tr><td style="padding:6px 0;color:var(--hk-text-muted);">Fri – Sat</td><td style="text-align:right;">4:00pm – 12:00am</td></tr>
+              <tr><td style="padding:6px 0;color:var(--hk-text-muted);">Sun</td><td style="text-align:right;">4:00pm – 10:00pm</td></tr>
+              <tr><td colspan="2" style="padding-top:12px;color:var(--hk-accent);font-size:.82rem;">⚠ Memorial Day (May 25): Closed all day</td></tr>
+            </table>
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Add Event modal (reused) -->
   <div class="hk-modal" id="add-event-modal">
     <div class="hk-modal__panel">
-      <h2>Add Event</h2>
+      <h2>Add / Edit Event</h2>
       <div class="hk-field">
         <label>Artist Name</label>
-        <input type="text" placeholder="e.g. Larry Dupio's Allstar Band">
+        <input type="text" placeholder="e.g. Larry Dupio's Allstar Band" value="Larry Dupio's Allstar Band">
       </div>
       <div class="hk-field">
         <label>Vibe (one short phrase)</label>
-        <input type="text" placeholder="e.g. Hilo's deep-bench groove veterans, locked in tight.">
+        <input type="text" placeholder="e.g. Hilo's deep-bench groove veterans, locked in tight." value="Hilo's deep-bench groove veterans, locked in tight.">
         <div class="hk-field__hint">This is what makes someone want to come — keep it short and specific.</div>
       </div>
       <div class="hk-field">
         <label>Genre Tags</label>
-        <input type="text" placeholder="Reggae, Funk, Local">
+        <input type="text" placeholder="Reggae, Funk, Local" value="Reggae, Funk, Local">
         <div class="hk-field__hint">Comma-separated. 1–3 tags.</div>
       </div>
       <div class="hk-field">
         <label>Photo or Gig Poster</label>
         <input type="file">
       </div>
-      <div class="hk-field">
-        <label>Date</label>
-        <input type="date">
-      </div>
-      <div class="hk-field">
-        <label>Time</label>
-        <input type="text" placeholder="8:00pm – 11:00pm">
+      <div class="hk-field" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--hk-s3);">
+        <div><label>Date</label><input type="date" value="2026-05-09"></div>
+        <div><label>Time</label><input type="text" value="8:00pm – 11:00pm"></div>
       </div>
       <div class="hk-field">
         <label>Cover Charge</label>
-        <input type="text" placeholder="Free, or $5, or $10">
+        <input type="text" placeholder="Free, or $5, or $10" value="Free">
       </div>
       <div class="hk-field">
-        <label>Full Description (optional)</label>
-        <textarea rows="4" placeholder="2–3 sentences for the expanded view"></textarea>
+        <label>Full Description</label>
+        <textarea rows="3" placeholder="2–3 sentences for the expanded view">Larry has been holding court in Hilo for decades, and his Allstar Band is exactly what it sounds like — the players you hope show up to a gig.</textarea>
       </div>
-      <button type="button" class="hk-btn" id="modal-close">Save Event (mockup — does nothing)</button>
+      <div style="display:flex;gap:var(--hk-s2);justify-content:flex-end;">
+        <button type="button" class="hk-btn" style="background:transparent;color:var(--hk-text-muted);border:1px solid #e8dec6;" onclick="closeModal('add-event-modal')">Cancel</button>
+        <button type="button" class="hk-btn" onclick="closeModal('add-event-modal')">Save Event</button>
+      </div>
     </div>
   </div>
-
-  <footer class="hk-footer">
-    <div>Hale Kanikapila · Downtown Hilo, Hawaii</div>
-    <span class="hk-footer__disclosure">Preview mockup — imagery sourced from halekanikapila.com for demo purposes.</span>
-  </footer>
 
   <script src="js/console.js"></script>
 </body>

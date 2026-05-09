@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events — Owner Dashboard — Hale Kanikapila Preview</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="hk-header">
+    <div class="hk-header__inner">
+      <a href="index.html" class="hk-header__brand"><img src="assets/img/logo.png" alt="Hale Kanikapila"></a>
+      <nav class="hk-nav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="owner-console.html">Owner Console</a>
+      </nav>
+    </div>
+  </header>
+
+  <div style="background:#fff7e0;border-bottom:1px solid #e6d8b0;padding:10px var(--hk-s4);text-align:center;font-family:var(--hk-font-ui);font-size:.85rem;color:#7a5c1a;">
+    <strong>Mockup preview</strong> — this is the Events management page inside the owner dashboard.
+  </div>
+
+  <div class="hk-dash">
+    <aside class="hk-dash__side">
+      <h4>Manage</h4>
+      <ul class="hk-dash__nav">
+        <li><a href="owner-console.html"><span class="hk-dash__icon">▦</span> Dashboard</a></li>
+        <li><a href="owner-events.html" class="is-active"><span class="hk-dash__icon">📅</span> Events</a></li>
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">🍽️</span> Menu</a></li>
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">🕐</span> Hours</a></li>
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">🖼️</span> Photos</a></li>
+      </ul>
+      <h4>Settings</h4>
+      <ul class="hk-dash__nav">
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">⚙</span> Site Settings</a></li>
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">👥</span> Staff Accounts</a></li>
+        <li><a href="#" onclick="alert('Mockup');return false;"><span class="hk-dash__icon">🛟</span> Help &amp; Training</a></li>
+      </ul>
+    </aside>
+
+    <main class="hk-dash__main">
+
+      <div class="hk-dash__topbar">
+        <div>
+          <h1 class="hk-dash__welcome">Events <small>6 upcoming · 2 drafts · last published 2 days ago</small></h1>
+        </div>
+        <div class="hk-dash__user">
+          <a href="events.html" target="_blank" style="color:var(--hk-accent);text-decoration:none;font-weight:600;">View Public Events Page →</a>
+        </div>
+      </div>
+
+      <div class="hk-toolbar">
+        <input type="search" placeholder="Search artists, vibes, or dates…">
+        <select>
+          <option>All events</option>
+          <option>Upcoming only</option>
+          <option>Drafts</option>
+          <option>Past events</option>
+        </select>
+        <select>
+          <option>This week + next</option>
+          <option>This month</option>
+          <option>Next 90 days</option>
+        </select>
+        <button class="hk-btn" onclick="openModal('add-event-modal')">＋ Add Event</button>
+      </div>
+
+      <table class="hk-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Artist</th>
+            <th>Vibe</th>
+            <th>Date &amp; Time</th>
+            <th>Cover</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img class="thumb" src="assets/img/events/larry-dupios.jpg" alt=""></td>
+            <td><strong>Larry Dupio's Allstar Band</strong><div class="vibe">Hilo's deep-bench groove veterans, locked in tight.</div></td>
+            <td><span style="display:inline-block;background:var(--hk-cream);color:var(--hk-brown);padding:2px 8px;border-radius:999px;font-size:.72rem;margin-right:4px;">Reggae</span><span style="display:inline-block;background:var(--hk-cream);color:var(--hk-brown);padding:2px 8px;border-radius:999px;font-size:.72rem;">Funk</span></td>
+            <td>Sat May 9<br><span style="color:var(--hk-text-muted);font-size:.85rem;">8:00pm – 11:00pm</span></td>
+            <td>Free</td>
+            <td><span class="badge badge--published">Published</span></td>
+            <td><div class="row-acts"><button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button><button class="iconbtn">Duplicate</button></div></td>
+          </tr>
+          <tr>
+            <td><img class="thumb" src="assets/img/events/dj-self-target.jpg" alt=""></td>
+            <td><strong>DJ Self Target</strong><div class="vibe">Late-night cuts that lean weird and hit hard.</div></td>
+            <td><span style="display:inline-block;background:var(--hk-cream);color:var(--hk-brown);padding:2px 8px;border-radius:999px;font-size:.72rem;">Electronic</span></td>
+            <td>Mon May 11<br><span style="color:var(--hk-text-muted);font-size:.85rem;">9:00pm – 12:00am</span></td>
+            <td>$5</td>
+            <td><span class="badge badge--published">Published</span></td>
+            <td><div class="row-acts"><button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button><button class="iconbtn">Duplicate</button></div></td>
+          </tr>
+          <tr>
+            <td><img class="thumb" src="assets/img/events/open-mic-tuesdays.jpg" alt=""></td>
+            <td><strong>Open Mic Tuesdays</strong><div class="vibe">The room finds out who you are. Bring something to play.</div></td>
+            <td><span style="display:inline-block;background:var(--hk-cream);color:var(--hk-brown);padding:2px 8px;border-radius:999px;font-size:.72rem;">Acoustic</span></td>
+            <td>Tue May 12 <span style="color:var(--hk-accent);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;margin-left:4px;">↻ recurring</span><br><span style="color:var(--hk-text-muted);font-size:.85rem;">7:00pm – 10:00pm</span></td>
+            <td>Free</td>
+            <td><span class="badge badge--published">Published</span></td>
+            <td><div class="row-acts"><button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button><button class="iconbtn">Duplicate</button></div></td>
+          </tr>
+          <tr>
+            <td><img class="thumb" src="assets/img/events/karaoke-wednesdays.jpg" alt=""></td>
+            <td><strong>Karaoke Wednesdays</strong><div class="vibe">You sing better than you think. The crowd knows it.</div></td>
+            <td><span style="display:inline-block;background:var(--hk-cream);color:var(--hk-brown);padding:2px 8px;border-radius:999px;font-size:.72rem;">Karaoke</span></td>
+            <td>Wed May 13 <span style="color:var(--hk-accent);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;margin-left:4px;">↻ recurring</span><br><span style="color:var(--hk-text-muted);font-size:.85rem;">8:00pm – 11:00pm</span></td>
+            <td>Free</td>
+            <td><span class="badge badge--published">Published</span></td>
+            <td><div class="row-acts"><button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button><button class="iconbtn">Duplicate</button></div></td>
+          </tr>
+          <tr>
+            <td><img class="thumb" src="assets/img/events/dj-derrick-funky-soul.jpg" alt=""></td>
+            <td><strong>DJ Derrick Funky Soul</strong><div class="vibe">Vinyl-deep funk and soul to keep the floor moving.</div></td>
+            <td><span style="display:inline-block;background:var(--hk-cream);color:var(--hk-brown);padding:2px 8px;border-radius:999px;font-size:.72rem;margin-right:4px;">Funk</span><span style="display:inline-block;background:var(--hk-cream);color:var(--hk-brown);padding:2px 8px;border-radius:999px;font-size:.72rem;">Soul</span></td>
+            <td>Fri May 15<br><span style="color:var(--hk-text-muted);font-size:.85rem;">9:00pm – 1:00am</span></td>
+            <td>$5</td>
+            <td><span class="badge badge--published">Published</span></td>
+            <td><div class="row-acts"><button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button><button class="iconbtn">Duplicate</button></div></td>
+          </tr>
+          <tr>
+            <td><img class="thumb" src="assets/img/events/freaky-tiki.jpg" alt=""></td>
+            <td><strong>Freaky Tiki</strong><div class="vibe">Tropical exotica with cocktails to match.</div></td>
+            <td><span style="display:inline-block;background:var(--hk-cream);color:var(--hk-brown);padding:2px 8px;border-radius:999px;font-size:.72rem;">Tiki</span></td>
+            <td>Sat May 16<br><span style="color:var(--hk-text-muted);font-size:.85rem;">8:00pm – 12:00am</span></td>
+            <td>$10</td>
+            <td><span class="badge badge--published">Published</span></td>
+            <td><div class="row-acts"><button class="iconbtn" onclick="openModal('add-event-modal')">Edit</button><button class="iconbtn">Duplicate</button></div></td>
+          </tr>
+          <tr style="background:#fcf6e8;">
+            <td><div style="width:48px;height:48px;background:var(--hk-cream-dark);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--hk-text-muted);font-size:.7rem;">No&nbsp;photo</div></td>
+            <td><strong>Sunday Slack Key Sessions</strong><div class="vibe" style="color:var(--hk-text-muted);">⚠ Vibe descriptor empty — won't go live until you add one</div></td>
+            <td>—</td>
+            <td>Sun May 17<br><span style="color:var(--hk-text-muted);font-size:.85rem;">5:00pm – 8:00pm</span></td>
+            <td>—</td>
+            <td><span class="badge badge--draft">Draft</span></td>
+            <td><div class="row-acts"><button class="iconbtn" onclick="openModal('add-event-modal')">Finish</button><button class="iconbtn">Delete</button></div></td>
+          </tr>
+          <tr style="background:#fcf6e8;">
+            <td><div style="width:48px;height:48px;background:var(--hk-cream-dark);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--hk-text-muted);font-size:.7rem;">No&nbsp;photo</div></td>
+            <td><strong>Memorial Day Block Party</strong><div class="vibe" style="color:var(--hk-text-muted);">Photo and time still needed.</div></td>
+            <td>—</td>
+            <td>Mon May 25<br><span style="color:var(--hk-text-muted);font-size:.85rem;">All day</span></td>
+            <td>—</td>
+            <td><span class="badge badge--draft">Draft</span></td>
+            <td><div class="row-acts"><button class="iconbtn" onclick="openModal('add-event-modal')">Finish</button><button class="iconbtn">Delete</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--hk-s4);font-family:var(--hk-font-ui);font-size:.85rem;color:var(--hk-text-muted);">
+        <div>Showing 8 of 8 events for the next 14 days</div>
+        <div>
+          <button class="iconbtn" disabled style="opacity:.5;">‹ Prev</button>
+          <button class="iconbtn" disabled style="opacity:.5;">Next ›</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Add Event modal (reused, identical to dashboard) -->
+  <div class="hk-modal" id="add-event-modal">
+    <div class="hk-modal__panel">
+      <h2>Add / Edit Event</h2>
+      <div class="hk-field">
+        <label>Artist Name</label>
+        <input type="text" placeholder="e.g. Larry Dupio's Allstar Band">
+      </div>
+      <div class="hk-field">
+        <label>Vibe (one short phrase)</label>
+        <input type="text" placeholder="e.g. Hilo's deep-bench groove veterans, locked in tight.">
+        <div class="hk-field__hint">This is what makes someone want to come — keep it short and specific.</div>
+      </div>
+      <div class="hk-field">
+        <label>Genre Tags</label>
+        <input type="text" placeholder="Reggae, Funk, Local">
+        <div class="hk-field__hint">Comma-separated. 1–3 tags.</div>
+      </div>
+      <div class="hk-field">
+        <label>Photo or Gig Poster</label>
+        <input type="file">
+      </div>
+      <div class="hk-field" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--hk-s3);">
+        <div><label>Date</label><input type="date"></div>
+        <div><label>Time</label><input type="text" placeholder="8:00pm – 11:00pm"></div>
+      </div>
+      <div class="hk-field">
+        <label>Cover Charge</label>
+        <input type="text" placeholder="Free, or $5, or $10">
+      </div>
+      <div class="hk-field">
+        <label>Full Description</label>
+        <textarea rows="3" placeholder="2–3 sentences for the expanded view"></textarea>
+      </div>
+      <div style="display:flex;gap:var(--hk-s2);justify-content:flex-end;">
+        <button type="button" class="hk-btn" style="background:transparent;color:var(--hk-text-muted);border:1px solid #e8dec6;" onclick="closeModal('add-event-modal')">Cancel</button>
+        <button type="button" class="hk-btn" onclick="closeModal('add-event-modal')">Save Event</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/console.js"></script>
+</body>
+</html>
