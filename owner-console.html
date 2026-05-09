@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Owner Console — Hale Kanikapila Preview</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="hk-header">
+    <div class="hk-header__inner">
+      <a href="index.html"><img src="assets/img/logo.png" alt="Hale Kanikapila"></a>
+      <nav class="hk-nav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="owner-console.html">Owner Console</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hk-section">
+    <div class="hk-container">
+      <div style="background:var(--hk-cream-dark);padding:var(--hk-s4);border-radius:6px;margin-bottom:var(--hk-s5);">
+        <strong>What you're looking at:</strong> a mockup of the dashboard owners see when they log in. No WordPress firehose — just the three things they actually need to do, with structured forms that make it impossible to miss the important fields (like the vibe descriptor on event listings).
+      </div>
+
+      <h1 style="text-align:center;">Owner Dashboard</h1>
+      <p style="text-align:center;color:var(--hk-text-muted);">Welcome back, Hale Kanikapila. What would you like to do?</p>
+
+      <div class="hk-console-grid">
+        <div class="hk-console-tile" id="add-event-tile">
+          <div class="hk-console-tile__icon">📅</div>
+          <div class="hk-console-tile__title">Add Event</div>
+          <div class="hk-console-tile__desc">Post a new show, with vibe descriptor and photo</div>
+        </div>
+        <div class="hk-console-tile">
+          <div class="hk-console-tile__icon">🍽️</div>
+          <div class="hk-console-tile__title">Edit Menu</div>
+          <div class="hk-console-tile__desc">Update food and drink items, prices, sections</div>
+        </div>
+        <div class="hk-console-tile">
+          <div class="hk-console-tile__icon">🕐</div>
+          <div class="hk-console-tile__title">Update Hours</div>
+          <div class="hk-console-tile__desc">Change opening hours or post a holiday closure</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hk-modal" id="add-event-modal">
+    <div class="hk-modal__panel">
+      <h2>Add Event</h2>
+      <div class="hk-field">
+        <label>Artist Name</label>
+        <input type="text" placeholder="e.g. Larry Dupio's Allstar Band">
+      </div>
+      <div class="hk-field">
+        <label>Vibe (one short phrase)</label>
+        <input type="text" placeholder="e.g. Hilo's deep-bench groove veterans, locked in tight.">
+        <div class="hk-field__hint">This is what makes someone want to come — keep it short and specific.</div>
+      </div>
+      <div class="hk-field">
+        <label>Genre Tags</label>
+        <input type="text" placeholder="Reggae, Funk, Local">
+        <div class="hk-field__hint">Comma-separated. 1–3 tags.</div>
+      </div>
+      <div class="hk-field">
+        <label>Photo or Gig Poster</label>
+        <input type="file">
+      </div>
+      <div class="hk-field">
+        <label>Date</label>
+        <input type="date">
+      </div>
+      <div class="hk-field">
+        <label>Time</label>
+        <input type="text" placeholder="8:00pm – 11:00pm">
+      </div>
+      <div class="hk-field">
+        <label>Cover Charge</label>
+        <input type="text" placeholder="Free, or $5, or $10">
+      </div>
+      <div class="hk-field">
+        <label>Full Description (optional)</label>
+        <textarea rows="4" placeholder="2–3 sentences for the expanded view"></textarea>
+      </div>
+      <button type="button" class="hk-btn" id="modal-close">Save Event (mockup — does nothing)</button>
+    </div>
+  </div>
+
+  <footer class="hk-footer">
+    <div>Hale Kanikapila · Downtown Hilo, Hawaii</div>
+    <span class="hk-footer__disclosure">Preview mockup — imagery sourced from halekanikapila.com for demo purposes.</span>
+  </footer>
+
+  <script src="js/console.js"></script>
+</body>
+</html>
