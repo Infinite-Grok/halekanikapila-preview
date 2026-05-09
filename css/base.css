@@ -1,0 +1,117 @@
+/* Hale Kanikapila — design system */
+
+:root {
+  /* Palette — sampled from halekanikapila.com */
+  --hk-cream:        #f4ead8;
+  --hk-cream-dark:   #e6d8b8;
+  --hk-brown:        #5a3a22;
+  --hk-brown-dark:   #2a1a0e;
+  --hk-accent:       #a63d2f;   /* terracotta from FDM section headers */
+  --hk-text:         #2a1a0e;
+  --hk-text-muted:   #6b5742;
+
+  /* Typography */
+  --hk-font-body:    "Georgia", "Times New Roman", serif;
+  --hk-font-display: "Playfair Display", "Georgia", serif;
+  --hk-font-ui:      -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Spacing scale */
+  --hk-s1:  0.25rem;
+  --hk-s2:  0.5rem;
+  --hk-s3:  1rem;
+  --hk-s4:  1.5rem;
+  --hk-s5:  2.5rem;
+  --hk-s6:  4rem;
+
+  /* Layout */
+  --hk-container: 1200px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--hk-font-body);
+  color: var(--hk-text);
+  background: var(--hk-cream);
+  line-height: 1.55;
+  font-size: 17px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--hk-font-display);
+  color: var(--hk-brown-dark);
+  margin: 0 0 var(--hk-s3) 0;
+  line-height: 1.15;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.375rem; }
+
+a { color: var(--hk-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.hk-container {
+  max-width: var(--hk-container);
+  margin: 0 auto;
+  padding: 0 var(--hk-s4);
+}
+
+.hk-btn {
+  display: inline-block;
+  background: var(--hk-accent);
+  color: var(--hk-cream);
+  padding: var(--hk-s2) var(--hk-s4);
+  border-radius: 4px;
+  font-family: var(--hk-font-ui);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: none;
+  cursor: pointer;
+}
+.hk-btn:hover { background: var(--hk-brown); text-decoration: none; }
+
+/* Header / footer shared markup */
+.hk-header {
+  background: var(--hk-brown-dark);
+  color: var(--hk-cream);
+  padding: var(--hk-s3) 0;
+}
+.hk-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--hk-container);
+  margin: 0 auto;
+  padding: 0 var(--hk-s4);
+}
+.hk-header img { height: 40px; }
+.hk-nav a {
+  color: var(--hk-cream);
+  margin-left: var(--hk-s4);
+  font-family: var(--hk-font-ui);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hk-footer {
+  background: var(--hk-brown-dark);
+  color: var(--hk-cream);
+  padding: var(--hk-s5) 0;
+  margin-top: var(--hk-s6);
+  text-align: center;
+  font-family: var(--hk-font-ui);
+  font-size: 0.875rem;
+}
+.hk-footer__disclosure {
+  display: block;
+  margin-top: var(--hk-s3);
+  color: var(--hk-cream-dark);
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
