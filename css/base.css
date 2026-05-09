@@ -79,7 +79,8 @@ a:hover { text-decoration: underline; }
 .hk-header {
   background: var(--hk-brown-dark);
   color: var(--hk-cream);
-  padding: var(--hk-s3) 0;
+  padding: var(--hk-s2) 0;
+  border-bottom: 3px solid var(--hk-accent);
 }
 .hk-header__inner {
   display: flex;
@@ -89,7 +90,15 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
   padding: 0 var(--hk-s4);
 }
-.hk-header img { height: 40px; }
+.hk-header__brand {
+  display: inline-flex;
+  align-items: center;
+  background: var(--hk-cream);
+  padding: 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+.hk-header__brand img { height: 64px; display: block; }
 .hk-nav a {
   color: var(--hk-cream);
   margin-left: var(--hk-s4);
